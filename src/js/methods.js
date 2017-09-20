@@ -502,6 +502,14 @@ export default {
         }
       }
 
+      if (rotated) {
+        self.renderCanvas();
+      } else if (scaled) {
+        self.renderImage();
+      }
+
+      ratio = imageData.width / imageData.naturalWidth;
+
       if (options.pivot) {
         if ($.isNumber(data.pivotX)) {
           cropBoxData.pivotX = data.pivotX * ratio;
@@ -511,14 +519,6 @@ export default {
           cropBoxData.pivotY = data.pivotY * ratio;
         }
       }
-
-      if (rotated) {
-        self.renderCanvas();
-      } else if (scaled) {
-        self.renderImage();
-      }
-
-      ratio = imageData.width / imageData.naturalWidth;
 
       if ($.isNumber(data.x)) {
         cropBoxData.left = (data.x * ratio) + canvasData.left;
