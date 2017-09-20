@@ -5,7 +5,7 @@
  * Copyright (c) 2017 Fengyuan Chen
  * Released under the MIT license
  *
- * Date: 2017-07-28T13:59:43.270Z
+ * Date: 2017-09-20T09:15:49.565Z
  */
 
 var DEFAULTS = {
@@ -2803,11 +2803,11 @@ var methods = {
 
       if (options.pivot) {
         if (isNumber(data.pivotX)) {
-          cropBoxData.pivotX = data.pivotX;
+          cropBoxData.pivotX = data.pivotX * ratio;
         }
 
         if (isNumber(data.pivotY)) {
-          cropBoxData.pivotY = data.pivotY;
+          cropBoxData.pivotY = data.pivotY * ratio;
         }
       }
 
