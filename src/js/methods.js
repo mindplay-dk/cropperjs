@@ -504,11 +504,11 @@ export default {
 
       if (options.pivot) {
         if ($.isNumber(data.pivotX)) {
-          cropBoxData.pivotX = data.pivotX;
+          cropBoxData.pivotX = data.pivotX * ratio;
         }
 
         if ($.isNumber(data.pivotY)) {
-          cropBoxData.pivotY = data.pivotY;
+          cropBoxData.pivotY = data.pivotY * ratio;
         }
       }
 
